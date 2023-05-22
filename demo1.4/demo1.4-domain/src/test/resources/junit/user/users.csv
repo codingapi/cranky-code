@@ -1,0 +1,6 @@
+email,username,password,match
+example1@qq.com,example1,123XDF,123XDF
+example2@qq.com,example2,ASDF$@,ASDF$@
+example3@qq.com,example3,&^FSDQ#X,&^FSDQ#X
+example4@qq.com,example4,FWE$#@$%@sX,FWE$#@$%@sX
+example5@qq.com,example5,&*&asdASDS3,&*&asdASDS3
