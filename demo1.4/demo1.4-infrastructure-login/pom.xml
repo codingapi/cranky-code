@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.codingapi.crankycode</groupId>
         <artifactId>demo1.4-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.codingapi.crankycode</groupId>
             <artifactId>demo1.4-domain</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
     </dependencies>
 
