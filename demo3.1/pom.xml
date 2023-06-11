@@ -9,7 +9,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>demo2.1</artifactId>
+    <artifactId>demo3.1</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -17,11 +17,11 @@
     <description>cranky-code</description>
     <modules>
         <module>demo1.4</module>
-        <module>demo2.1</module>
+        <module>demo3.1</module>
     </modules>
     <properties>
         <java.version>17</java.version>
-        <codingapi-springboot.version>2.1.3</codingapi-springboot.version>
+        <codingapi-springboot.version>2.1.4</codingapi-springboot.version>
     </properties>
     <dependencies>
 
