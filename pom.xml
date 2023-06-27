@@ -20,7 +20,6 @@
         <module>demo3.1</module>
         <module>demo3.2</module>
         <module>demo4.3</module>
-        <module>demo4.3/kafka-framework</module>
     </modules>
     <properties>
         <java.version>17</java.version>
