@@ -1,8 +1,8 @@
 package com.example.oa.controller;
 
-import com.codingapi.crankycode.kafka.event.EventPusher;
+import com.codingapi.crankycode.kafka.event.KafkaPusher;
+import com.codingapi.crankycode.kafka.message.TestMsg;
 import com.example.oa.controller.pojo.ApproveCommand;
-import com.example.oa.message.TestMsg;
 import com.example.oa.model.FsProcessApprovalService;
 import com.example.oa.model.domain.FsProcess;
 import com.example.oa.model.domain.User;
@@ -39,8 +39,9 @@ public class OaController {
 
     @GetMapping("/test")
     public void test(){
-        TestMsg testMsg = new TestMsg("hello");
-        EventPusher.push(testMsg);
+        TestMsg testMsg = new TestMsg();
+        testMsg.setMsg("hello");
+        KafkaPusher.push(testMsg);
     }
 
 }

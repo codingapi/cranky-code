@@ -1,7 +1,7 @@
 package com.codingapi.crankycode.kafka;
 
-import com.codingapi.crankycode.kafka.event.BaseEvent;
-import com.codingapi.crankycode.kafka.event.EventRegister;
+import com.codingapi.crankycode.kafka.event.KafkaEvent;
+import com.codingapi.crankycode.kafka.event.KafkaRegister;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -12,8 +12,8 @@ import org.springframework.kafka.support.converter.RecordMessageConverter;
 public class KafkaConfiguration {
 
     @Bean(initMethod = "init")
-    public EventRegister eventRegister(KafkaTemplate<String, BaseEvent> template){
-        return new EventRegister(template);
+    public KafkaRegister eventRegister(KafkaTemplate<String, KafkaEvent> template){
+        return new KafkaRegister(template);
     }
 
     @Bean

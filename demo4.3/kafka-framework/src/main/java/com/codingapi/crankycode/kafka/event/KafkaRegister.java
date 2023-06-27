@@ -5,11 +5,11 @@ import lombok.AllArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 
 @AllArgsConstructor
-public class EventRegister {
+public class KafkaRegister {
 
-    private final KafkaTemplate<String,BaseEvent> template;
+    private final KafkaTemplate<String, KafkaEvent> template;
 
     public void init(){
-        EventPusher.getInstance().init(template);
+        KafkaPusher.getInstance().init(template);
     }
 }

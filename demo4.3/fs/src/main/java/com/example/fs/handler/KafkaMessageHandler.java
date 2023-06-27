@@ -1,7 +1,7 @@
 package com.example.fs.handler;
 
-import com.example.fs.message.MessageConstants;
-import com.example.fs.message.TestMsg;
+import com.codingapi.crankycode.kafka.message.MessageConstants;
+import com.codingapi.crankycode.kafka.message.TestMsg;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -12,8 +12,9 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class KafkaMessageHandler {
 
-    @KafkaListener(groupId = "fs-group",topics = MessageConstants.TEST_TOPIC)
+    @KafkaListener(groupId = MessageConstants.GROUP_FS_NAME,topics = MessageConstants.TOPIC_TEST)
     public void handler(TestMsg testMsg){
         log.info("msg:{}",testMsg);
     }
+
 }
