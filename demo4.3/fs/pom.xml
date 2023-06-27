@@ -10,7 +10,8 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>fs</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
+
     <name>fs</name>
     <description>fs</description>
     <properties>

@@ -16,14 +16,15 @@
     <packaging>pom</packaging>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
         <module>fs</module>
         <module>oa</module>
+        <module>kafka-framework</module>
     </modules>
+
 
 </project>
