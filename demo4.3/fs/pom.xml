@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.codingapi.crankycode</groupId>
-        <artifactId>cranky-code-parent</artifactId>
+        <artifactId>demo4.3-parent</artifactId>
         <version>0.0.1</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.example</groupId>
     <artifactId>fs</artifactId>
