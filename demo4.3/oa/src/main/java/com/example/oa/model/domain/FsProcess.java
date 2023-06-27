@@ -4,8 +4,10 @@ import com.codingapi.springboot.framework.event.EventPusher;
 import com.example.oa.model.event.FsProcessApproveEvent;
 import com.example.oa.model.event.FsProcessStatusEvent;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
+@ToString
 public class FsProcess {
 
     private final String name;

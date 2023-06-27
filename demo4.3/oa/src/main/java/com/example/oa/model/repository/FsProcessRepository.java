@@ -6,4 +6,6 @@ public interface FsProcessRepository {
 
     void save(FsProcess process);
 
+    FsProcess getFsProcessByName(String name);
+
 }
