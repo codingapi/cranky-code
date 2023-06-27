@@ -24,8 +24,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka</artifactId>
+			<groupId>com.codingapi.crankycode</groupId>
+			<artifactId>kafka-framework</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 
 

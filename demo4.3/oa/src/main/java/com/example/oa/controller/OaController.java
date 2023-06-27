@@ -1,15 +1,14 @@
 package com.example.oa.controller;
 
+import com.codingapi.crankycode.kafka.event.EventPusher;
 import com.example.oa.controller.pojo.ApproveCommand;
+import com.example.oa.message.TestMsg;
 import com.example.oa.model.FsProcessApprovalService;
 import com.example.oa.model.domain.FsProcess;
 import com.example.oa.model.domain.User;
 import com.example.oa.model.repository.FsProcessRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/oa")
@@ -36,6 +35,12 @@ public class OaController {
         FsProcessApprovalService approvalService = new FsProcessApprovalService(approverUser,fsProcess);
         approvalService.approve(command.isApproved());
         return true;
+    }
+
+    @GetMapping("/test")
+    public void test(){
+        TestMsg testMsg = new TestMsg("hello");
+        EventPusher.push(testMsg);
     }
 
 }
