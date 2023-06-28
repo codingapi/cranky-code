@@ -29,7 +29,7 @@ public class FsProcess {
     }
 
     public void checkApprover(User user) {
-        if (this.approverUser != user) {
+        if (!this.approverUser.equals(user)) {
             throw new RuntimeException("not the same approver");
         }
     }

@@ -7,7 +7,8 @@ import lombok.Setter;
 @Getter
 public class SettlementCommand {
 
-    private String oprationUser;
+    private String operatorUser;
+
     private String billUser;
 
     private float money;

@@ -9,11 +9,11 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class TestMsg extends KafkaEvent {
+public class TestMessage extends KafkaEvent {
 
     private String msg;
 
-    public TestMsg() {
+    public TestMessage() {
         super(MessageConstants.TOPIC_TEST);
     }
 
