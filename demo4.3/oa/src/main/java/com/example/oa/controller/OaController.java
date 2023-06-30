@@ -38,6 +38,7 @@ public class OaController {
         User approverUser = new User(command.getApproverUser());
         FsProcess fsProcess =  processRepository.getFsProcessByName(command.getProcessName());
         approvalService.approve(approverUser,fsProcess,command.isApproved());
+        processRepository.save(fsProcess);
         return true;
     }
 
