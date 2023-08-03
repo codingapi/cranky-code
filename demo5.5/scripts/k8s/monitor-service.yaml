@@ -5,7 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 18082
+    - name: http-metrics
+      port: 18082
       targetPort: 18082
   selector:
     app: monitor

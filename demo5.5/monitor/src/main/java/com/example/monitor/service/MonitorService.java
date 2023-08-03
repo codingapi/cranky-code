@@ -12,9 +12,9 @@ public class MonitorService {
     private final AtomicInteger value = new AtomicInteger(0);
 
     public MonitorService(MeterRegistry registry) {
-        Gauge.builder("monitor-value", value, AtomicInteger::get)
-                .description("monitor-value is a gauge for monitor value")
-                .tags("monitor-tag","monitor-value") // Optional tags
+        Gauge.builder("monitor_value", value, AtomicInteger::get)
+                .description("monitor_value is a gauge for monitor value")
+                .tags("monitor_tag","monitor_value") // Optional tags
                 .register(registry);
     }
 
