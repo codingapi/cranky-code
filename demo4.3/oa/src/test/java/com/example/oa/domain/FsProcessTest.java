@@ -9,15 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FsProcessTest {
 
+    private final FsProcessApprovalService fsProcessApprovalService = new FsProcessApprovalService();
+
     @Test
     void approve() {
         User user1 = new User("user1");
         User user2 = new User("user2");
         FsProcess fsProcess = new FsProcess("process1", user1, 1000);
         fsProcess.setApproverUser(user2);
-
-        FsProcessApprovalService fsProcessApprovalService = new FsProcessApprovalService(user2,fsProcess);
-        fsProcessApprovalService.approve(true);
+        fsProcessApprovalService.approve(user2,fsProcess,true);
         assertTrue(fsProcess.isApproved());
     }
 
@@ -28,8 +28,7 @@ class FsProcessTest {
         FsProcess fsProcess = new FsProcess("process1", user1, 1000);
         fsProcess.setApproverUser(user2);
 
-        FsProcessApprovalService fsProcessApprovalService = new FsProcessApprovalService(user2,fsProcess);
-        fsProcessApprovalService.approve(false);
+        fsProcessApprovalService.approve(user2,fsProcess,false);
 
         assertFalse(fsProcess.isApproved());
     }
@@ -40,10 +39,8 @@ class FsProcessTest {
         User user2 = new User("user2");
         FsProcess fsProcess = new FsProcess("process1", user1, 1000);
         fsProcess.setApproverUser(user2);
-        FsProcessApprovalService fsProcessApprovalService = new FsProcessApprovalService(user1,fsProcess);
-
         assertThrows(RuntimeException.class, () -> {
-            fsProcessApprovalService.approve(true);
+            fsProcessApprovalService.approve(user1,fsProcess,true);
         });
     }
 }

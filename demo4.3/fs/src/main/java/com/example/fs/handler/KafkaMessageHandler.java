@@ -2,7 +2,6 @@ package com.example.fs.handler;
 
 import com.codingapi.crankycode.kafka.message.FsProcessApproveMessage;
 import com.codingapi.crankycode.kafka.message.MessageConstants;
-import com.codingapi.crankycode.kafka.message.TestMessage;
 import com.example.fs.application.SettlementExecutor;
 import com.example.fs.controller.pojo.SettlementCommand;
 import lombok.AllArgsConstructor;
@@ -18,11 +17,6 @@ public class KafkaMessageHandler {
     private final SettlementExecutor settlementExecutor;
 
     private final static String DEFAULT_OPERATOR_USER = "operator";
-
-    @KafkaListener(groupId = MessageConstants.GROUP_FS_NAME,topics = MessageConstants.TOPIC_TEST)
-    public void handlerTestMsg(TestMessage testMessage){
-        log.info("msg:{}", testMessage);
-    }
 
 
     @KafkaListener(groupId = MessageConstants.GROUP_FS_NAME,topics = MessageConstants.TOPIC_PROCESS_APPROVE)
