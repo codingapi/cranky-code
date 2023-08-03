@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.1</version>
+        <version>3.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.codingapi.crankycode</groupId>
@@ -20,10 +20,11 @@
         <module>demo3.1</module>
         <module>demo3.2</module>
         <module>demo4.3</module>
+        <module>demo5.5</module>
     </modules>
     <properties>
         <java.version>17</java.version>
-        <codingapi-springboot.version>2.1.4</codingapi-springboot.version>
+        <codingapi-springboot.version>2.1.5</codingapi-springboot.version>
     </properties>
     <dependencies>
 
