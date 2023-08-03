@@ -10,8 +10,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -21,15 +19,13 @@ import java.util.Objects;
 @Service
 public class K8sClient {
 
-    private static final String KUBE_CONFIG_PATH = "k8s/admin.conf";
     private final CoreV1Api api;
 
     public K8sClient() {
         try {
-            Resource resource = new ClassPathResource(KUBE_CONFIG_PATH);
+            Resource resource = new ClassPathResource("k8s/admin.conf");
             Reader reader = new InputStreamReader(resource.getInputStream());
             ApiClient client = ClientBuilder.kubeconfig(KubeConfig.loadKubeConfig(reader)).build();
-            client.setDebugging(true);
             Configuration.setDefaultApiClient(client);
             api = new CoreV1Api(client);
         } catch (Exception e) {
