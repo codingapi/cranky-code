@@ -1,2 +1,2 @@
-docker-compose -f docker-register.yml up -d
+docker-compose -f ./docker-register.yaml up -d
 docker ps -a
