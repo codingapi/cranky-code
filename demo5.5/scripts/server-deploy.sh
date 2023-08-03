@@ -9,7 +9,7 @@ REGISTRY_URL=10.13.14.230:5000
 docker build -t server:$VERSION -f ./server.Dockerfile .
 
 # 为私有 Registry 标记镜像，包括版本号
-docker tag server:$VERSION $REGISTRY-URL/server:$VERSION
+docker tag server:$VERSION $REGISTRY_URL/server:$VERSION
 
 # 推送镜像到私有 Registry，包括版本号
 docker push $REGISTRY_URL/server:$VERSION
