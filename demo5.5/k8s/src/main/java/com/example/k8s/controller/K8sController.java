@@ -1,6 +1,6 @@
-package com.example.hpa.controller;
+package com.example.k8s.controller;
 
-import com.example.hpa.service.K8sClient;
+import com.example.k8s.service.K8sClient;
 import io.kubernetes.client.openapi.ApiException;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,4 +19,6 @@ public class K8sController {
     public List<String> listServices() throws ApiException {
         return k8sClient.listServices();
     }
+
+
 }

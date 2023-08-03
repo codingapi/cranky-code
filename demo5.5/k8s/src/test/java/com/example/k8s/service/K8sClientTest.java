@@ -1,4 +1,4 @@
-package com.example.hpa.service;
+package com.example.k8s.service;
 
 import io.kubernetes.client.openapi.ApiException;
 import org.junit.jupiter.api.Test;
