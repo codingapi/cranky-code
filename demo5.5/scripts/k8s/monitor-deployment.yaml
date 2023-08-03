@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: monitor
+  labels:
+    app: monitor
 spec:
   replicas: 1
   selector:
