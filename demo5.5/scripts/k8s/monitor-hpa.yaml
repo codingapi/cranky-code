@@ -6,17 +6,14 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: server
+    name: monitor
   minReplicas: 1
   maxReplicas: 10
   metrics:
-    - type: External
-      external:
+    - type: Pods
+      pods:
         metric:
           name: monitor_value
-          selector:
-            matchLabels:
-              app: monitor
         target:
           type: AverageValue
           averageValue: 50
