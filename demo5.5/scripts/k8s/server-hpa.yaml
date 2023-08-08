@@ -13,7 +13,7 @@ spec:
     - type: Pods
       pods:
         metric:
-          name: monitor_value
+          name: request_count
         target:
           type: AverageValue
           averageValue: 50
