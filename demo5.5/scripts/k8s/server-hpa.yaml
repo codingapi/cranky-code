@@ -16,4 +16,4 @@ spec:
           name: request_count
         target:
           type: AverageValue
-          averageValue: 50
+          averageValue: 10
