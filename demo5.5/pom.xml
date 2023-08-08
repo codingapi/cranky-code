@@ -22,7 +22,6 @@
 
     <modules>
         <module>k8s</module>
-        <module>monitor</module>
         <module>server</module>
     </modules>
 

@@ -15,5 +15,6 @@ spec:
       containers:
         - name: server-container
           image: 10.13.14.230:5000/server:1.0.0
+          imagePullPolicy: Always
           ports:
             - containerPort: 18083

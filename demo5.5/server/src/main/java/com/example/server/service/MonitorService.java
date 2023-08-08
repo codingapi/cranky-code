@@ -1,4 +1,4 @@
-package com.example.monitor.service;
+package com.example.server.service;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
@@ -12,9 +12,9 @@ public class MonitorService {
     private final AtomicInteger value = new AtomicInteger(0);
 
     public MonitorService(MeterRegistry registry) {
-        Gauge.builder("monitor_value", value, AtomicInteger::get)
-                .description("monitor_value is a gauge for monitor value")
-                .tags("monitor_tag","monitor_value") // Optional tags
+        Gauge.builder("request_count", value, AtomicInteger::get)
+                .description("request_count is a gauge for request count")
+                .tags("request_count_tag","request_count") // Optional tags
                 .register(registry);
     }
 
